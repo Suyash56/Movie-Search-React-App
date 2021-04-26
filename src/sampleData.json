@@ -1,0 +1,46 @@
+{
+  "Search": [
+    {
+      "Title": "Interstellar",
+      "Year": "2014",
+      "imdbID": "tt0816692",
+      "Type": "movie",
+      "Director": "Christopher Nolan",
+      "Genre": "Adventure",
+      "imdbRating": "8.6",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Batman: The Killing Joke",
+      "Year": "2016",
+      "imdbID": "tt4853102",
+      "Type": "movie",
+      "Director": "Sam Liu",
+      "Genre": "Animation, Action, Crime, Drama, Thriller",
+      "imdbRating": "6.4",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTdjZTliODYtNWExMi00NjQ1LWIzN2MtN2Q5NTg5NTk3NzliL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    },
+    {
+      "Title": "The Amazing Spider-Man 2",
+      "Year": "2014",
+      "imdbID": "tt1872181",
+      "Type": "movie",
+      "Genre": "Action, Adventure, Fantasy, Sci-Fi",
+      "Director": "Marc Webb",
+      "imdbRating": "6.6",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Thor: Legend of the Magical Hammer",
+      "Year": "2011",
+      "imdbID": "tt1241721",
+      "Type": "movie",
+      "Genre": "Animation, Adventure, Comedy, Family, Fantasy",
+      "Director": "Óskar Jónasson",
+      "imdbRating": "4.9",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTYxOTI1OTI0NF5BMl5BanBnXkFtZTgwMDQzMjcwMzE@._V1_SX300.jpg"
+    }
+  ],
+  "totalResults": "30",
+  "Response": "True"
+}
