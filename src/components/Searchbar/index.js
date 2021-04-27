@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Cards from "../Cards";
 import defaultData from "../../sampleData.json";
 
@@ -13,17 +14,32 @@ export default function SearchBar() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (year === "" && id === "" && title === "") {
-      console.log(title);
-      fetch(
-        `http://www.omdbapi.com/?apikey=${APIKEY}&s=${title}&y=${year}&i=${id}&plot=full`
-      )
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          setData(res.Search);
-        })
-        .catch((err) => console.log(err));
+    if (window.location.protocol === "http:") {
+      if (year !== "" && id !== "" && title !== "") {
+        console.log(title);
+        axios
+          .get(
+            `http://www.omdbapi.com/?apikey=${APIKEY}&s=${title}&y=${year}&i=${id}&plot=full`
+          )
+          .then((res) => {
+            console.log(res);
+            setData(res.data.Search);
+          })
+          .catch((err) => console.log(err));
+      }
+    } else {
+      if (year !== "" && id !== "" && title !== "") {
+        console.log(title);
+        axios
+          .get(
+            `https://www.omdbapi.com/?apikey=${APIKEY}&s=${title}&y=${year}&i=${id}&plot=full`
+          )
+          .then((res) => {
+            console.log(res);
+            setData(res.data.Search);
+          })
+          .catch((err) => console.log(err));
+      }
     }
   };
 
@@ -51,7 +67,7 @@ export default function SearchBar() {
               autoComplete="off"
               value={year}
               onChange={(e) => {
-                setYear("");
+                setYear(e.target.value);
               }}
             />
             <input
@@ -78,27 +94,16 @@ export default function SearchBar() {
         {title === "" && year === "" && id === ""
           ? defaultData.Search.map((ele) => {
               return (
-                <Cards
-                  Title={ele.Title}
-                  Director={ele.Director}
-                  Imdb={ele.imdbRating}
-                  Genre={ele.Genre}
-                  Poster={ele.Poster}
-                />
+                <Cards Title={ele.Title} Year={ele.Year} Poster={ele.Poster} />
               );
             })
           : data.map((ele) => {
               return (
-                <Cards
-                  Title={ele.Title}
-                  Director={ele.Director}
-                  Imdb={ele.imdbRating}
-                  Genre={ele.Genre}
-                  Poster={ele.Poster}
-                />
+                <Cards Title={ele.Title} Year={ele.Year} Poster={ele.Poster} />
               );
             })}
       </div>
     </>
   );
 }
+//tt0286716
