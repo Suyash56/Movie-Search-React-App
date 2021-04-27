@@ -12,8 +12,8 @@ export default function SearchBar() {
 
   const APIKEY = "1b5bfbea";
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (window.location.protocol === "http:") {
       if (year !== "" && id !== "" && title !== "") {
         console.log(title);
@@ -47,7 +47,7 @@ export default function SearchBar() {
     <>
       <div className="relative shadow-lg my-10 p-5 rounded-md mx-5">
         <form onSubmit={handleSubmit}>
-          <div className="field-group grid grid-cols-2 md:grid-cols-4 gap-4 flex justify-around ">
+          <div className="ield-group flex flex-col md:flex-row justify-around">
             <input
               type="search"
               name="s"
